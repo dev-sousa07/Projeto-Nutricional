@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Marcellus", serif;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9; /* Cor de fundo suave */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .login-container {
+            background-color: #fff; /* Branco para o fundo do formulário */
+            border-radius: 12px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 380px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #6a11cb; /* Roxo para o título */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            color: #333;
+            transition: border 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input:focus {
+            border-color: #6a11cb; /* Roxo no foco */
+            box-shadow: 0 0 8px rgba(106, 17, 203, 0.7);
+        }
+
+        .form-group input::placeholder {
+            color: #bbb;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4caf50; /* Verde para o botão */
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049; /* Efeito de hover no botão */
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .signup-link a {
+            color: #6a11cb; /* Roxo para o link */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .signup-link a:hover {
+            color: #4caf50; /* Verde no hover do link */
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .login-container {
+                padding: 30px 20px;
+            }
+
+            .login-container h2 {
+                font-size: 24px;
+            }
+
+            .form-group input {
+                font-size: 14px;
+            }
+
+            .form-group button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="perfil.html" method="get"> <!-- Alterado para redirecionar diretamente -->
+            <div class="form-group">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" name="username" placeholder="Digite seu nome de usuário" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            </div>
+            <div class="form-group">
+                <!-- O formulário agora redireciona para "perfil.html" -->
+                <button type="submit">Entrar</button>
+            </div>
+        </form>
+        <div class="signup-link">
+            <p>Não tem uma conta? <a href="criar.html">Cadastre-se aqui</a></p>
+        </div>
+    </div>
+</body>
+</html>

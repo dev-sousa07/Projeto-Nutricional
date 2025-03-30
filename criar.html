@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <title>Criando sua conta</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Marcellus", serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f7f7f7;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .back-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .back-btn:hover {
+            color: #7c64a4;
+        }
+
+        .progress-bar {
+            flex: 1;
+            height: 5px;
+            background-color: #7c64a4;
+            margin-left: 15px;
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+
+        .content {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .duo-icon {
+            width: 80px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .duo-icon:hover {
+            transform: scale(1.1);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .options {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .option {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 12px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .option:hover {
+            background-color: #8a43fd38;
+            border-color: #7c64a4;
+        }
+
+        .option label {
+            margin-bottom: 6px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .option input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #333;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .option input:focus {
+            border-color: #7c64a4;
+        }
+
+        .continue-btn {
+            width: 100%;
+            background-color: #7c64a4;
+            color: #fff;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .continue-btn:hover {
+            background-color: #7c64a4;
+        }
+
+        .continue-btn:active {
+            background-color: #7c64a4;
+        }
+
+        .continue-btn:disabled {
+            background-color: #b2b2b2;
+            cursor: not-allowed;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f0f0f0;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+   <header>
+        <a href="inicial.html"><button class="back-btn">&larr;</button></a>
+        <div class="progress-bar" style="width: 70%;"></div>
+    </header> 
+
+    <div class="content">
+        <img src="imagens/logo.png" alt="Ícone do Duolingo" class="duo-icon">
+        <h2>Criando sua conta</h2>
+        
+        <div class="options">
+            <div class="option">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+            </div>
+            <div class="option">
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" placeholder="Digite sua idade">
+            </div>
+            <div class="option">
+                <label for="altura">Altura:</label>
+                <input type="text" id="altura" name="altura" placeholder="Digite sua altura">
+            </div>
+            <div class="option">
+                <label for="peso">Peso:</label>
+                <input type="text" id="peso" name="peso" placeholder="Digite seu peso">
+            </div>
+        </div>
+        <a href="perguntas/perguntas.html">
+            <button class="continue-btn">Próximo</button>
+        </a>
+    </div>
+
+    <footer>
+        &copy; 2024 , Todos os direitos reservados.
+    </footer>
+</div>
+
+</body>
+</html>

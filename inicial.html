@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <title>MYF´SP</title>
+    <style>
+        /* Paleta de Cores : #DC8DF2 , #CA6DF2 , #8836BF , #56208C , #100126 
+        Amarelo: #e4fc84 
+        Verde: #43834c , #718C35 , #ecfcf6
+        lilás: #7c64a4 , #7668A6
+        creme: #D9D5A0 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Marcellus", serif;
+        }
+
+        body {
+            margin: 0 !important;
+            font-family: 'Circular', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: left;
+            background: url(imagens/black-olives-top-view-white-background-space-text.jpg) no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .navbar a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #1f1d1d;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #00796b;
+        }
+
+         /* Estilo para o comentário acima da palavra */
+         
+
+        .button:hover {
+            background-color: #005f56;
+        }
+
+        .container {
+            margin-left: 10%;
+            margin-top: 5%;
+            margin-bottom: 20%;
+            padding: 2rem;
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container h1 {
+            font-size: 2.5rem;
+            color: #333333c4;
+            line-height: 1.3;
+        }
+
+        .highlight {
+            color:#7668A6;
+        }
+
+        .container p {
+            color: #35333397;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .entrar {
+            background-color: #7668A6;
+            color: #fff;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .criar {
+            background-color: #fffdfd89;
+            color: #000000;
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .entrar:hover {
+            background-color: #7f55ff63;
+        }
+        .criar:hover {
+            background-color: #4d4d4d79;
+            color: white;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        .image-container img {
+            width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Seções */
+        .section {
+            padding: 40px;
+            margin-top: 300px;
+            margin-bottom: 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+        }
+
+        .section .content {
+            margin: 0 auto;
+            margin-bottom: 10%;
+        }
+
+        .section img {
+            width: 10px;
+            height: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Atração */
+        .attraction {
+            background-color: #e0f7fa;
+        }
+
+        /* Benefícios */
+        .benefits {
+            background-color: #ffffff;
+        }
+
+        .benefits .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .benefits .card {
+            background-color: #fafafa86;
+            padding: 20px;
+            width: 250px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .benefits .card img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .benefits .card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .benefits .card p {
+            font-size: 1em;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color:#7B67A6;
+            color: white;
+            padding: 20px;
+            padding-top: 20px;
+            width: 100%;
+
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+        .destaque{
+            color:#40804B;
+        }
+
+        .destaque2{
+            color: #7668A6;
+        }
+
+        .comment {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .comment::after {
+            content: "(11) 91234-5678";
+            position: absolute;
+            top: -25px;
+            left: 0;
+            background-color: #fff;
+            border: 1px solid #101010;
+            padding: 5px;
+            font-size: 12px;
+            color: #333;
+            white-space: nowrap;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .comment:hover::after {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .comment1 {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .comment1::after {
+            content: "myf'sp.gmail.com.br";
+            position: absolute;
+            top: -25px;
+            left: 0;
+            background-color: #fff;
+            border: 1px solid #101010;
+            padding: 5px;
+            font-size: 12px;
+            color: #333;
+            white-space: nowrap;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .comment1:hover::after {
+            visibility: visible;
+            opacity: 1;
+        }
+        .premium-section {
+            background-color: #e9e9e9;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .premium-section h2 {
+            color: #6a0dad;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .premium-section p {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .benefits-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .benefit-card {
+            background-color: #fafafa;
+            border-radius: 8px;
+            padding: 10px;
+            width: 45%;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .benefit-card h3 {
+            color: #333;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .benefit-card p {
+            color: #555;
+            font-size: 1em;
+        }
+
+        /* Estilo do botão para aderir ao plano */
+        .join-premium {
+            background-color: #6a0dad;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .join-premium:hover {
+            background-color: #5a0cad;
+        }
+        /* Media query para dispositivos móveis com largura máxima de 600px */
+@media (max-width: 600px) {
+    body{
+        background: url(imagens/paracelular.jpg) no-repeat local fixed;
+    }
+    /* Ajusta a navegação */
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    /* Ajusta o container principal */
+    .container {
+        margin: 5% 5%;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .container h1 {
+        font-size: 1.8rem;
+    }
+
+    .container p {
+        font-size: 1rem;
+    }
+
+    /* Ajusta os botões */
+    .entrar, .criar {
+        font-size: 1rem;
+        padding: 0.8rem;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    /* Ajusta as seções de benefícios */
+    .benefits .cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .benefits .card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .benefits .card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    footer h2 {
+        font-size: 1.5rem;
+    }
+    
+    footer p {
+        font-size: 1rem;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="imagens/logo.png" alt="Logo" style="height: 40px; border-radius: 25px; margin-right: 1rem;">
+        <div class="alinhar">
+            <a href="#"><span class="comment1">Email</span></a>
+           <a href="#"><span class="comment">Contato</span></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <p>Com o MYF'SP você...</p>
+        <h1><span class="highlight">Alimenta</span> seus objetivos</h1>
+        <p>Seu plano, sua nutrição, sua melhor saúde.</p>
+        <a href="criar.html"><button class="criar">Comece agora</button></a>
+        <a href="login.html"><button class="entrar">Já tenho uma conta</button></a>
+    </div>
+    <section class="section benefits">
+        <h2><span class="destaque2">Benefícios</span> do nosso <span class="destaque2">Plano</span> Alimentar</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="imagens/energia2.png"  width="80px" height="80pxx" alt="Energia">
+                <h3>Mais <span class="destaque">Energia</span></h3>
+                <p>Sinta-se disposto para as atividades do dia a dia.</p>
+            </div>
+            <div class="card">
+                <img src="imagens/peso-removebg-preview.png" alt="Controle de Peso">
+                <h3>Controle de <span class="destaque">Peso</span></h3>
+                <p>Perda de peso saudável sem dietas restritivas.</p>
+            </div>
+            <div class="card">
+                <img src="imagens/coração.png" alt="Vida">
+                <h3>Expectativa de <span class="destaque">Vida</span></h3>
+                <p>Uma boa alimentação contribui para sua saúde mental e física.</p>
+            </div>
+        </div>
+    </section>
+     <!-- Seção Premium -->
+     <section class="premium-section">
+        <h2>Plano Premium para uma experiência ainda mais completa</h2>
+        <p>Com o plano Premium, você terá acesso a um acompanhamento completo com profissionais dedicados ao seu bem-estar físico e mental.</p>
+        
+        <div class="benefits-container">
+            <div class="benefit-card">
+                <h3>Consultoria Nutricional</h3>
+                <p>Receba planos alimentares personalizados com acompanhamento semanal.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Treinos Personalizados</h3>
+                <p>Tenha treinos ajustados às suas metas com personal trainers experientes.</p>
+            </div>
+
+        <button class="join-premium">Assine o Plano Premium</button>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <h2>Pronto para Começar?</h2>
+        <p>Receba seu plano alimentar exclusivo em minutos.</p>
+    </footer>

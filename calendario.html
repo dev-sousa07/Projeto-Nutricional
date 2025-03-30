@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: "Marcellus", serif;
+        }
+         body { 
+                font-family: Arial, sans-serif;  background-color: #f4f4f4; margin: 0; padding: 0; }
+   
+    .navbar a:hover {
+         color:#7B67A6;
+         } 
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            margin: 0 1rem;
+            transition: color 0.3s ease-in-out;
+            text-align: right;
+        }
+    
+        .calendar-container {
+                margin: 0 auto;
+                margin-top: 3px;
+                width: 95%; 
+                background-color: #fff; 
+                padding: 10px;
+                padding-top: 2px;
+                border-radius: 0px 0px 10px 10px; 
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
+                          
+             h1 { text-align: center; 
+                color: #333; 
+                font-size: 1.5rem; } 
+                            
+             .calendar { 
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 10px; } 
+                                  
+            .calendar th, 
+                                  
+            .calendar td {
+                width: 14.2%; 
+                text-align: center;
+                padding: 5px;
+                border: 1px solid #ddd;
+             } 
+
+            .calendar th {
+                background-color:#7B67A6; 
+                color: white; } 
+
+            .calendar td { 
+                background-color: #f9f9f9; 
+                cursor: pointer;
+             } 
+
+            .calendar td {
+                transition: background-color 0.7s ease, border-radius 0.3s ease;
+}
+
+            .calendar td:hover {
+                background-color: #e0f7fa; 
+                border-radius: 80px;
+}
+
+                 
+            #message-box { margin-top: 10px;
+                text-align: center; 
+                font-size: 20px;
+                font-family: "Marcellus", serif;
+                color: #ffffff; 
+                background-color:#7b67a6ba;
+                width: 50%;
+                margin-left: 27%;
+                
+            }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="inicial.html"><img src="imagens/logo.png" alt="Logo" style="height: 40px;  border-radius: 25px; margin-right: 1rem;"></a>
+        <div class="alinhar">
+            <a href="perfil.html">Meu Perfil</a>
+            <a href="calendario.html">Calendário</a>
+            <a href="planoalimentar.html">Plano Alimentar</a>
+        </div>
+    </div>
+
+    <div class="calendar-container">
+        <h1>Novembro</h1>
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <th>Dom</th>
+                    <th>Seg</th>
+                    <th>Ter</th>
+                    <th>Qua</th>
+                    <th>Qui</th>
+                    <th>Sex</th>
+                    <th>Sáb</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td onclick="showMessage(1)">1</td>
+                    <td onclick="showMessage(2)">2</td>
+                </tr>
+                <tr>
+                    <td onclick="showMessage(3)">3</td>
+                    <td onclick="showMessage(4)">4</td>
+                    <td onclick="showMessage(5)">5</td>
+                    <td onclick="showMessage(6)">6</td>
+                    <td onclick="showMessage(7)">7</td>
+                    <td onclick="showMessage(8)">8</td>
+                    <td onclick="showMessage(9)">9</td>
+                </tr>
+                <tr>
+                    <td onclick="showMessage(10)">10</td>
+                    <td onclick="showMessage(11)">11</td>
+                    <td onclick="showMessage(12)">12</td>
+                    <td onclick="showMessage(13)">13</td>
+                    <td onclick="showMessage(14)">14</td>
+                    <td onclick="showMessage(15)">15</td>
+                    <td onclick="showMessage(16)">16</td>
+                </tr>
+                <tr>
+                    <td onclick="showMessage(17)">17</td>
+                    <td onclick="showMessage(18)">18</td>
+                    <td onclick="showMessage(19)">19</td>
+                    <td onclick="showMessage(20)">20</td>
+                    <td onclick="showMessage(21)">21</td>
+                    <td onclick="showMessage(22)">22</td>
+                    <td onclick="showMessage(23)">23</td>
+                </tr>
+                <tr>
+                    <td onclick="showMessage(24)">24</td>
+                    <td onclick="showMessage(25)">25</td>
+                    <td onclick="showMessage(26)">26</td>
+                    <td onclick="showMessage(27)">27</td>
+                    <td onclick="showMessage(28)">28</td>
+                    <td onclick="showMessage(29)">29</td>
+                    <td onclick="showMessage(30)">30</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h1>Dezembro</h1>
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <th>Dom</th>
+                    <th>Seg</th>
+                    <th>Ter</th>
+                    <th>Qua</th>
+                    <th>Qui</th>
+                    <th>Sex</th>
+                    <th>Sáb</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td onclick="showMessage(1, 'dezembro')">1</td>
+                    <td onclick="showMessage(2, 'dezembro')">2</td>
+                    <td onclick="showMessage(3, 'dezembro')">3</td>
+                    <td onclick="showMessage(4, 'dezembro')">4</td>
+                    <td onclick="showMessage(5, 'dezembro')">5</td>
+                    <td onclick="showMessage(6, 'dezembro')">6</td>
+                    <td onclick="showMessage(7, 'dezembro')">7</td>
+                </tr>
+                <tr>
+                    <td onclick="showMessage(8, 'dezembro')">8</td>
+                    <td onclick="showMessage(9, 'dezembro')">9</td>
+                    <td onclick="showMessage(10, 'dezembro')">10</td>
+                    <td onclick="showMessage(11, 'dezembro')">11</td>
+                    <td onclick="showMessage(12, 'dezembro')">12</td>
+                    <td onclick="showMessage(13, 'dezembro')">13</td>
+                    <td onclick="showMessage(14, 'dezembro')">14</td>
+                </tr>
+                <tr>
+                    <td onclick="showMessage(15, 'dezembro')">15</td>
+                    <td onclick="showMessage(16, 'dezembro')">16</td>
+                    <td onclick="showMessage(17, 'dezembro')">17</td>
+                    <td onclick="showMessage(18, 'dezembro')">18</td>
+                    <td onclick="showMessage(19, 'dezembro')">19</td>
+                    <td onclick="showMessage(20, 'dezembro')">20</td>
+                    <td onclick="showMessage(21, 'dezembro')">21</td>
+                </tr>
+                <tr>
+                    <td onclick="showMessage(22, 'dezembro')">22</td>
+                    <td onclick="showMessage(23, 'dezembro')">23</td>
+                    <td onclick="showMessage(24, 'dezembro')">24</td>
+                    <td onclick="showMessage(25, 'dezembro')">25</td>
+                    <td onclick="showMessage(26, 'dezembro')">26</td>
+                    <td onclick="showMessage(27, 'dezembro')">27</td>
+                    <td onclick="showMessage(28, 'dezembro')">28</td>
+                </tr>
+                <tr>
+                    <td onclick="showMessage(29, 'dezembro')">29</td>
+                    <td onclick="showMessage(30, 'dezembro')">30</td>
+                    <td onclick="showMessage(31, 'dezembro')">31</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div id="message-box">Clique em um dia para ver a mensagem</div>
+    </div>
+
+    <script>
+        function showMessage(day, month = 'novembro') {
+            const messages = {
+                novembro: {
+                    1: "Cada pequena mudança é um passo na direção certa.",
+                    2: "Seja paciente com o seu corpo; ele está se adaptando ao seu esforço.",
+                    3: "Você não precisa ser perfeito, só precisa continuar.",
+                    4: "Seu futuro eu vai agradecer as escolhas saudáveis que você faz hoje.",
+                    5: "Comemore cada pequena vitória e siga em frente.",
+                    6: "Cuide do seu corpo; ele é o único lugar onde você realmente vive.",
+                    7: "Os resultados valem o esforço!",
+                    8: "Um passo de cada vez e você chegará lá.",
+                    9: "Seu esforço de hoje será sua motivação amanhã.",
+                    10: "Pequenos passos levam a grandes conquistas.",
+                    11: "Você é mais forte do que imagina.",
+                    12: "A persistência é o caminho para o sucesso.",
+                    13: "Confie no processo, ele vale a pena.",
+                    14: "Cada escolha saudável é uma vitória.",
+                    15: "Lembre-se do porquê começou.",
+                    16: "Cuide de si; você merece o melhor.",
+                    17: "Acredite no seu potencial.",
+                    18: "A disciplina é o que mantém a chama acesa.",
+                    19: "Desafios são oportunidades para crescer.",
+                    20: "Dê o seu melhor, sempre.",
+                    21: "O futuro depende das suas ações de hoje.",
+                    22: "A força vem da persistência.",
+                    23: "Hoje é um bom dia para melhorar.",
+                    24: "Não desista, o esforço será recompensado.",
+                    25: "Você é mais capaz do que imagina.",
+                    26: "Cada escolha saudável conta.",
+                    27: "Invista em si mesmo.",
+                    28: "Seja gentil consigo mesmo.",
+                    29: "Avance com coragem.",
+                    30: "Celebre cada progresso que fizer."
+                },
+                dezembro: {
+                    1: "O esforço de hoje é a conquista de amanhã.",
+                    2: "Tudo começa com o primeiro passo.",
+                    3: "Foque no progresso, não na perfeição.",
+                    4: "Cuide de seu corpo e mente.",
+                    5: "Você está mais forte a cada dia.",
+                    6: "A disciplina é a ponte entre metas e realizações.",
+                    7: "O sacrifício de hoje é o sucesso de amanhã.",
+                    8: "Confie no seu potencial.",
+                    9: "Cada pequena vitória conta.",
+                    10: "A dedicação vale a pena.",
+                    11: "Não há progresso sem ação.",
+                    12: "Pequenos passos também levam ao sucesso.",
+                    13: "Acredite na sua capacidade.",
+                    14: "Persistência supera obstáculos.",
+                    15: "Cada decisão conta.",
+                    16: "O importante é não desistir.",
+                    17: "Motivação leva à ação.",
+                    18: "Seja paciente, o progresso é contínuo.",
+                    19: "Invista no seu bem-estar.",
+                    20: "A mudança começa dentro de você.",
+                    21: "Desafie seus limites.",
+                    22: "O esforço é o primeiro passo.",
+                    23: "Valorize seu progresso.",
+                    24: "É tempo de colher o que plantou.",
+                    25: "O autocuidado é essencial.",
+                    26: "O sucesso é construído diariamente.",
+                    27: "Seja constante em suas ações.",
+                    28: "Cada dia é uma nova chance.",
+                    29: "Faça o melhor que puder.",
+                    30: "Lembre-se, você está no caminho certo.",
+                    31: "A jornada vale o esforço."
+                }
+            };
+
+            const message = messages[month][day] || "Nenhuma mensagem para esta data";
+            document.getElementById("message-box").innerText = message;
+        }
+    </script>
+</body>
+</html>
